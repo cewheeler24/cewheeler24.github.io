@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+body{
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  margin: 2rem;
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 16px;
+}
+
 .sr-only {
   border: 0;
   clip: rect(0, 0, 0, 0);
@@ -8,5 +19,25 @@
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
 
+.container{
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'PT Serif', serif;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+a{
+  font-family: 'SUSE Mono', monospace;
+  color: #1a0dab;
+}
+
+p{
+  line-height: 1.6em;
 }
