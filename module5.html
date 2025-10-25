@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 5</title>
+    <link href="css/drop-nav-accessible.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Public Address Systems</h1>
+    </header>
+
+    <nav>
+        <h2 class="sr-only">Main Navigation</h2>
+        <ul>
+            <li class="dropdown">
+                <button type="button" class="dropdown__title" aria-expanded="false" aria-controls="nav-dropdown">
+                    <span class="material-icons">menu</span> PA Systems
+                </button>
+                <ul class="dropdown__menu" id="nav-dropdown">
+                    <li><a href="#PA-systems"><span class="material-icons">info</span> Intro</a></li>
+                    <li><a href="#contact"><span class="material-icons">contact_mail</span> Let Us Contact You</a></li>
+                    <li><a href="#examples"><span class="material-icons">list</span> PA System Examples</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="maincontent">
+        <section id="PA-systems">
+            <p>A <strong>public address system</strong> (<em>or <abbr title="Public Address System">PA
+                        system</abbr></em>)
+                is an electronic system comprising
+                microphones, amplifiers,
+                loudspeakers, and related equipment. It increases the apparent volume (loudness) of a human voice,
+                musical
+                instrument, or other acoustic sound source or recorded sound or music. PA systems are used in any public
+                venue that requires that an announcer, performer, etc. be sufficiently audible at a distance or over a
+                large
+                area. Typical applications include sports stadiums, public transportation vehicles and facilities, and
+                live
+                or recorded music venues and events. A PA system may include multiple microphones or other sound
+                sources, a
+                mixing console to combine and modify multiple sources, and multiple amplifiers and loudspeakers for
+                louder
+                volume or wider distribution.
+            </p>
+
+            <p>
+                A high-quality PA system is essential for ensuring clear and consistent audio in any environment—whether
+                it’s a school auditorium, a corporate conference room, or a live performance venue. Modern PA systems
+                are
+                designed to deliver powerful, evenly distributed sound that reaches every listener without distortion or
+                feedback. From microphones and mixers to amplifiers and speakers, each component works together to
+                provide
+                reliable communication and an engaging auditory experience.
+            </p>
+
+
+            <p>
+                Today’s PA systems go beyond simple voice projection. With advancements in digital signal processing,
+                wireless technology, and networked audio, they can easily integrate with existing infrastructure to
+                support
+                a wide range of applications. Whether you need a system for background music, emergency alerts, or
+                large-scale event production, customizable configurations ensure that your specific needs are met with
+                precision and flexibility.
+            </p>
+            <p>
+                At our company, we specialize in designing and installing PA systems that combine performance,
+                durability,
+                and ease of use. Our experts take the time to understand your space, acoustic challenges, and usage
+                goals to
+                create a tailored solution that delivers exceptional sound quality every time. From consultation to
+                installation and ongoing support, we make sure your PA system works seamlessly—so your message is always
+                heard loud and clear.
+            </p>
+        </section>
+
+        <section id="contact">
+            <form id="myform" method="post">
+                <fieldset>
+                    <legend>Want to learn more about PA systems?</legend>
+
+                    <label for="name">
+                        what is your name? *required
+                        <input type="text" id="name" placeholder="first last" required>
+                    </label>
+
+                    <label for="your-email">
+                        what is your email?
+                        <input type="email" id="your-email">
+                    </label>
+
+                    <label for="website">
+                        what is your website?
+                        <input type="url" id="website" placeholder="http://www.site.com">
+                    </label>
+
+                    <label for="phone">
+                        what is your phone number?
+                        <input type="tel" id="phone" minlength="10" placeholder="555-555-5555">
+                    </label>
+
+                    <label for="age">
+                        how old are you?
+                        <input type="number" id="age" placeholder="35">
+                    </label>
+
+                    <label for="password">
+                        what is your favorite password?
+                        <input type="text" id="password" maxlength="20" minlength="5"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+!=]).*" required>
+                        <ul class="inputRequirements">
+                            <li>must be at least 5 characters and contain uppercase, lowercase, number and symbol</li>
+                        </ul>
+                    </label>
+
+
+                    <input type="submit">
+                </fieldset>
+            </form>
+        </section>
+
+        <section id="examples">
+            <table>
+                <caption>PA Systems</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Speakers</th>
+                        <th scope="col">Amps</th>
+                        <th scope="col">Mixers</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Kustom PA PA50</td>
+                        <td>Behringer A800</td>
+                        <td>Yamaha MG10XU</td>
+                    </tr>
+                    <tr>
+                        <td>Rockville RSG8</td>
+                        <td>Behringer Europower EPQ304</td>
+                        <td>Mackie ProFX12v3</td>
+                    </tr>
+                    <tr>
+                        <td>Behringer PK108</td>
+                        <td>Pyle ptau23 Mini</td>
+                        <td>Yamaha MG12XU</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+</html>
