@@ -1,0 +1,118 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #E6D99B;
+    font-family: sans-serif;
+    font-size:15px
+}
+
+h1,
+h2,
+h3{
+    font-family: serif;
+    font-weight: normal;
+    padding: .2em 0;
+}
+
+p{
+    margin: 1.8em 0;
+    line-height: 1.8em;
+    font-family: "PT Serif", serif;
+}
+
+h2{
+    font-family: "Roboto", sans-serif;
+    font-size:1.25em;
+}
+
+header,
+nav,
+main,
+aside,
+footer{
+    padding: 1.5em;
+    border: 1px black solid;
+}
+
+header,
+footer{
+    text-align: center;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #E6D99B;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns:
+    1fr 2fr 1fr;
+    grid-template-areas:
+    "heady heady heady"
+    "navvy navvy navvy"
+    "aside1 mainy aside2"
+    "aside1 mainy aside2"
+    "aside1 mainy aside2"
+    "footy footy footy";
+}
+
+header{grid-area: heady; background:#E3A142;}
+nav{grid-area: navvy; background:#E3C842;}
+main{grid-area: mainy; background:#E6D99B; max-height: 100%;}
+#aside1{grid-area: aside1; background:#E3DC42;}
+#aside2{grid-area: aside2; background:#E3DC42;}
+footer{grid-area: footy; background:#B9E342;}
+
+nav ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+@media screen and (min-width: 641px) and (max-width: 900px){
+    .container{
+        grid-template-columns:
+        1fr 1fr;
+        grid-template-areas:
+        "heady heady"
+        "navvy navvy"
+        "mainy mainy"
+        "aside1 aside2"
+        "footy footy";
+    }
+}
+
+@media screen and (max-width: 640px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "heady"
+        "mainy"
+        "aside1"
+        "aside2"
+        "navvy"
+        "footy";
+    }
+    nav ul{
+        flex-flow: column nowrap;
+        text-align: center;
+    }
+    nav ul li a{
+        display: block;
+        padding: 10px 5px;
+        margin: 5px;
+        border: 1px black solid;
+        background: white;
+    }
+}
