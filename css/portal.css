@@ -48,9 +48,10 @@ footer{
     border: 1px black solid;
 }
 
-aside{
+img{
     text-align:center;
     margin: 0 auto;
+    max-width: 100%;
 }
 
 header,
