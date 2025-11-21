@@ -1,0 +1,159 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #6B8F77;
+    font-family: sans-serif;
+    font-size:15px
+}
+
+h1,
+h2,
+h3{
+    font-family: serif;
+    font-weight: normal;
+    padding: .2em 0;
+    color: #183A23;
+}
+
+#first-paragraph{
+    margin: 1.8em 0;
+    line-height: 1.8em;
+    font-family: "PT Serif", serif;
+    font-size: 2em;
+}
+
+p{
+    margin: 1.8em 0;
+    line-height: 1.8em;
+    font-family: "PT Serif", serif;
+    font-size: 1.4em;
+}
+
+h2{
+    font-family: "Roboto", sans-serif;
+    font-size:1.25em;
+}
+
+header,
+nav,
+main,
+aside,
+footer{
+    padding: 0;
+}
+
+img{
+    text-align:center;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+header,
+footer{
+    text-align: center;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #A4B9AB;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns:
+    1fr 2fr 1fr;
+    grid-template-areas:
+    "heady heady heady"
+    "navvy navvy navvy"
+    "mainy mainy mainy"
+    "mainy mainy mainy"
+    "mainy mainy mainy"
+    "footy footy footy";
+}
+
+header{grid-area: heady; background:#A4B9AB;}
+#main-nav{grid-area: navvy; background:#A4B9AB;}
+main{grid-area: mainy; background:#A4B9AB; max-height: 100%;}
+footer{grid-area: footy; background:#A4B9AB;}
+
+header{
+    padding-top: 5em;
+}
+
+#main-content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1em;      
+}
+
+h1{
+    font-size: 2.5em;
+}
+
+h2{
+    font-size: 1.8em;
+}
+
+#main-nav ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    font-size: 1.2em;
+}
+
+#main-nav ul li a{
+    color: #183A23;
+}
+
+#skip-nav ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 15px;
+    font-size: 1.1em;
+    color: #A4B9AB;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+@media screen and (min-width: 641px) and (max-width: 900px){
+    .container{
+        grid-template-columns:
+        1fr 1fr;
+        grid-template-areas:
+        "heady heady"
+        "navvy navvy"
+        "mainy mainy"
+        "footy footy";
+    }
+}
+
+@media screen and (max-width: 640px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "heady"
+        "navvy"
+        "mainy"
+        "footy";
+    }
+    nav ul{
+        flex-flow: column nowrap;
+        text-align: center;
+    }
+    nav ul li a{
+        display: block;
+        padding: 10px 5px;
+        margin: 5px;
+        border: 1px black solid;
+        background: white;
+    }
+}
