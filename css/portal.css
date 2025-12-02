@@ -6,60 +6,61 @@
     padding: 0;
 }
 
-body{
+body {
     background: #FFF;
     font-family: sans-serif;
-    font-size:15px
+    font-size: 15px
 }
 
 h1,
 h2,
-h3{
+h3 {
     font-family: serif;
     font-weight: normal;
     padding: .2em 0;
 }
 
-#first-paragraph{
+#first-paragraph {
     margin: 1.8em 0;
     line-height: 1.8em;
     font-family: "PT Serif", serif;
     font-size: 2em;
 }
 
-p{
+p {
     margin: 1.8em 0;
     line-height: 1.8em;
     font-family: "PT Serif", serif;
     font-size: 1.4em;
+    max-width: 70%;
 }
 
-h2{
+h2 {
     font-family: "Roboto", sans-serif;
-    font-size:1.25em;
+    font-size: 1.4em;
 }
 
 header,
 nav,
 main,
 aside,
-footer{
+footer {
     padding: 1.5em;
     border: 1px black solid;
 }
 
-img{
-    text-align:center;
+img {
+    text-align: center;
     margin: 0 auto;
     max-width: 100%;
 }
 
 header,
-footer{
+footer {
     text-align: center;
 }
 
-.container{
+.container {
     max-width: 1200px;
     margin: 0 auto;
     background: #FFF;
@@ -67,32 +68,56 @@ footer{
     width: 100vw;
     height: 100vh;
     grid-template-columns:
-    1fr 2fr 1fr;
+        1fr 2fr 1fr;
     grid-template-areas:
-    "heady heady heady"
-    "navvy navvy navvy"
-    "skippy skippy skippy"
-    "photo mainy mainy"
-    "photo mainy mainy"
-    "photo mainy mainy"
-    "footy footy footy";
+        "heady heady heady"
+        "navvy navvy navvy"
+        "skippy skippy skippy"
+        "photo mainy mainy"
+        "photo mainy mainy"
+        "photo mainy mainy"
+        "footy footy footy";
 }
 
-header{grid-area: heady; background:#FFF;}
-#main-nav{grid-area: navvy; background:#FFF;}
-#skip-nav{grid-area: skippy; background:#FFF;}
-main{grid-area: mainy; background:#FFF; max-height: 100%;}
-#photo{grid-area: photo; background:#FFF;}
-footer{grid-area: footy; background:#FFF;}
+header {
+    grid-area: heady;
+    background: #FFF;
+}
 
-#main-nav ul{
+#main-nav {
+    grid-area: navvy;
+    background: #FFF;
+}
+
+#skip-nav {
+    grid-area: skippy;
+    background: #FFF;
+}
+
+main {
+    grid-area: mainy;
+    background: #FFF;
+    max-height: 100%;
+}
+
+#photo {
+    grid-area: photo;
+    background: #FFF;
+}
+
+footer {
+    grid-area: footy;
+    background: #FFF;
+}
+
+#main-nav ul {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
     font-size: 1.2em;
 }
 
-#skip-nav ul{
+#skip-nav ul {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -100,44 +125,53 @@ footer{grid-area: footy; background:#FFF;}
     font-size: 1.1em;
 }
 
-nav ul li{
+nav ul li {
     list-style: none;
+    background-color: lightblue;
+    border-radius: 12px;
+    padding: 8px 14px;
+    color: black;
 }
 
-@media screen and (min-width: 641px) and (max-width: 900px){
-    .container{
+nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 641px) and (max-width: 900px) {
+    .container {
         grid-template-columns:
-        1fr 1fr;
+            1fr 1fr;
         grid-template-areas:
-        "heady heady"
-        "navvy navvy"
-        "skippy skippy"
-        "mainy mainy"
-        "photo photo"
-        "footy footy";
+            "heady heady"
+            "navvy navvy"
+            "skippy skippy"
+            "mainy mainy"
+            "photo photo"
+            "footy footy";
     }
 }
 
-@media screen and (max-width: 640px){
-    .container{
+@media screen and (max-width: 640px) {
+    .container {
         grid-template-columns: 1fr;
         grid-template-areas:
-        "heady"
-        "navvy"
-        "skippy"
-        "mainy"
-        "photo"
-        "footy";
+            "heady"
+            "navvy"
+            "skippy"
+            "mainy"
+            "photo"
+            "footy";
     }
-    nav ul{
+
+    nav ul {
         flex-flow: column nowrap;
         text-align: center;
     }
-    nav ul li a{
+
+    nav ul li a {
         display: block;
         padding: 10px 5px;
         margin: 5px;
-        border: 1px black solid;
-        background: white;
     }
 }
