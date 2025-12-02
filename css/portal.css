@@ -125,19 +125,6 @@ footer {
     font-size: 1.1em;
 }
 
-nav ul li {
-    list-style: none;
-    background-color: lightblue;
-    border-radius: 12px;
-    padding: 8px 14px;
-    color: black;
-}
-
-nav ul li a {
-    color: black;
-    text-decoration: none;
-}
-
 @media screen and (min-width: 641px) and (max-width: 900px) {
     .container {
         grid-template-columns:
@@ -174,4 +161,17 @@ nav ul li a {
         padding: 10px 5px;
         margin: 5px;
     }
+}
+
+nav ul li {
+    list-style: none;
+    background-color: lightblue;
+    border-radius: 12px;
+    padding: 8px 14px;
+    color: black;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
 }
